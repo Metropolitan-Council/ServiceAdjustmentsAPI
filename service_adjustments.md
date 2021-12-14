@@ -33,31 +33,299 @@ Detour:
 *new_shape_id 1 isn't correct, but accurately portrays the data layout*
 ```json
 {
-	"service_adjustment_id": "129861r09ruqw0",
-	"detour_name": "Nicollet Mall Farmer's Market NB routes 4, 6, 12",
-	"previous_adjustment_id": null,
-	"adjustment_types": ["detour"],
-	"skipped_stops": ["17990", "17992", "17994", "17996", "17998"],
-	"new_shapes": [{"new_shape_id": "0", "shape_segment": [
-		{"from_stop_id": "19333", "to_stop_id": "53311", "lat": [44.9731,44.9729,44.9728,44.9728,44.9727,44.9726,44.972,44.9714,44.9709,44.9717], "lon": [-93.2789,-93.2788,-93.2786,-93.2783,-93.278,-93.2778,-93.2763,-93.2749,-93.2735,-93.2728]},
-		{"from_stop_id": "53311", "to_stop_id": "53312", "lat": [44.9717,44.9718,44.9728,44.9737], "lon": [-93.2728,-93.2727,-93.272,-93.2713]},
-		{"from_stop_id": "53312", "to_stop_id": "53313", "lat": [44.9737,44.9738,44.9748,44.9756], "lon": [-93.2713,-93.2711,-93.2703,-93.2696]},
-		{"from_stop_id": "53313", "to_stop_id": "53314", "lat": [44.9756,44.9757,44.9767,44.9776], "lon": [-93.2696,-93.2695,-93.2687,-93.268]},
-		{"from_stop_id": "53314", "to_stop_id": "17950", "lat": [44.9775,44.9776,44.9786,44.9796,44.9805,44.9807,44.9812,44.9819,44.9822,44.9827], "lon": [-93.268,-93.2679,-93.2671,-93.2663,-93.2654,-93.2653,-93.2667,-93.2681,-93.2689,-93.2683]},
-	]}, 
-	{"new_shape_id": "1", "shape_segment": [
-		{"from_stop_id": "19333", "to_stop_id": "53311", "lat": [44.9731,44.9729,44.9728,44.9728,44.9727,44.9726,44.972,44.9714,44.9709,44.9717], "lon": [-93.2789,-93.2788,-93.2786,-93.2783,-93.278,-93.2778,-93.2763,-93.2749,-93.2735,-93.2728]},
-		{"from_stop_id": "53311", "to_stop_id": "53312", "lat": [44.9717,44.9718,44.9728,44.9737], "lon": [-93.2728,-93.2727,-93.272,-93.2713]},
-		{"from_stop_id": "53312", "to_stop_id": "53313", "lat": [44.9737,44.9738,44.9748,44.9756], "lon": [-93.2713,-93.2711,-93.2703,-93.2696]},
-		{"from_stop_id": "53313", "to_stop_id": "53314", "lat": [44.9756,44.9757,44.9767,44.9776], "lon": [-93.2696,-93.2695,-93.2687,-93.268]},
-		{"from_stop_id": "53314", "to_stop_id": "17950", "lat": [44.9775,44.9776,44.9786,44.9796,44.9805,44.9807,44.9812,44.9819,44.9822,44.9827], "lon": [-93.268,-93.2679,-93.2671,-93.2663,-93.2654,-93.2653,-93.2667,-93.2681,-93.2689,-93.2683]},
-	]}
-	],
-	"new_stops": [{"stop_id": "53311"}, {"stop_id": "53312"}, {"stop_id": "53313"}, {"stop_id": "53314"}],
-	"entity_selector": [{"route_id": "6", "direction_id": 0, "new_shape_id": 1, "FromToVia": null}, {"route_id": "4", "direction_id": 0, "new_shape_id": 1, "FromToVia": null}, {"route_id": "6", "direction_id": 1, "new_shape_id": 1, "FromToVia": null}, {"route_id": "4", "direction_id": 1, "new_shape_id": 1, "FromToVia": null}],
-	"start_datetime": {"date": "2021-09-23", "time": 17100},
-	"end_datetime": {"date": "2021-09-23", "time": 57600},
-	"recurs_every": {"days": null, "weeks": 1, "weekday": [4], "ends_on": {"date": "2021-12-23", "time": 57600}, "excluded_dates": null},
+  "service_adjustment_id": "129861r09ruqw0",
+  "detour_name": "Nicollet Mall Farmer's Market NB routes 4, 6, 12",
+  "previous_adjustment_id": null,
+  "adjustment_types": [
+    "detour"
+  ],
+  "skipped_stops": [
+    "17990",
+    "17992",
+    "17994",
+    "17996",
+    "17998"
+  ],
+  "new_shapes": [
+    {
+      "new_shape_id": "0",
+      "shape_segment": [
+        {
+          "from_stop_id": "19333",
+          "to_stop_id": "53311",
+          "lat": [
+            44.9731,
+            44.9729,
+            44.9728,
+            44.9728,
+            44.9727,
+            44.9726,
+            44.972,
+            44.9714,
+            44.9709,
+            44.9717
+          ],
+          "lon": [
+            -93.2789,
+            -93.2788,
+            -93.2786,
+            -93.2783,
+            -93.278,
+            -93.2778,
+            -93.2763,
+            -93.2749,
+            -93.2735,
+            -93.2728
+          ]
+        },
+        {
+          "from_stop_id": "53311",
+          "to_stop_id": "53312",
+          "lat": [
+            44.9717,
+            44.9718,
+            44.9728,
+            44.9737
+          ],
+          "lon": [
+            -93.2728,
+            -93.2727,
+            -93.272,
+            -93.2713
+          ]
+        },
+        {
+          "from_stop_id": "53312",
+          "to_stop_id": "53313",
+          "lat": [
+            44.9737,
+            44.9738,
+            44.9748,
+            44.9756
+          ],
+          "lon": [
+            -93.2713,
+            -93.2711,
+            -93.2703,
+            -93.2696
+          ]
+        },
+        {
+          "from_stop_id": "53313",
+          "to_stop_id": "53314",
+          "lat": [
+            44.9756,
+            44.9757,
+            44.9767,
+            44.9776
+          ],
+          "lon": [
+            -93.2696,
+            -93.2695,
+            -93.2687,
+            -93.268
+          ]
+        },
+        {
+          "from_stop_id": "53314",
+          "to_stop_id": "17950",
+          "lat": [
+            44.9775,
+            44.9776,
+            44.9786,
+            44.9796,
+            44.9805,
+            44.9807,
+            44.9812,
+            44.9819,
+            44.9822,
+            44.9827
+          ],
+          "lon": [
+            -93.268,
+            -93.2679,
+            -93.2671,
+            -93.2663,
+            -93.2654,
+            -93.2653,
+            -93.2667,
+            -93.2681,
+            -93.2689,
+            -93.2683
+          ]
+        }
+      ]
+    },
+    {
+      "new_shape_id": "1",
+      "shape_segment": [
+        {
+          "from_stop_id": "19333",
+          "to_stop_id": "53311",
+          "lat": [
+            44.9731,
+            44.9729,
+            44.9728,
+            44.9728,
+            44.9727,
+            44.9726,
+            44.972,
+            44.9714,
+            44.9709,
+            44.9717
+          ],
+          "lon": [
+            -93.2789,
+            -93.2788,
+            -93.2786,
+            -93.2783,
+            -93.278,
+            -93.2778,
+            -93.2763,
+            -93.2749,
+            -93.2735,
+            -93.2728
+          ]
+        },
+        {
+          "from_stop_id": "53311",
+          "to_stop_id": "53312",
+          "lat": [
+            44.9717,
+            44.9718,
+            44.9728,
+            44.9737
+          ],
+          "lon": [
+            -93.2728,
+            -93.2727,
+            -93.272,
+            -93.2713
+          ]
+        },
+        {
+          "from_stop_id": "53312",
+          "to_stop_id": "53313",
+          "lat": [
+            44.9737,
+            44.9738,
+            44.9748,
+            44.9756
+          ],
+          "lon": [
+            -93.2713,
+            -93.2711,
+            -93.2703,
+            -93.2696
+          ]
+        },
+        {
+          "from_stop_id": "53313",
+          "to_stop_id": "53314",
+          "lat": [
+            44.9756,
+            44.9757,
+            44.9767,
+            44.9776
+          ],
+          "lon": [
+            -93.2696,
+            -93.2695,
+            -93.2687,
+            -93.268
+          ]
+        },
+        {
+          "from_stop_id": "53314",
+          "to_stop_id": "17950",
+          "lat": [
+            44.9775,
+            44.9776,
+            44.9786,
+            44.9796,
+            44.9805,
+            44.9807,
+            44.9812,
+            44.9819,
+            44.9822,
+            44.9827
+          ],
+          "lon": [
+            -93.268,
+            -93.2679,
+            -93.2671,
+            -93.2663,
+            -93.2654,
+            -93.2653,
+            -93.2667,
+            -93.2681,
+            -93.2689,
+            -93.2683
+          ]
+        }
+      ]
+    }
+  ],
+  "new_stops": [
+    {
+      "stop_id": "53311"
+    },
+    {
+      "stop_id": "53312"
+    },
+    {
+      "stop_id": "53313"
+    },
+    {
+      "stop_id": "53314"
+    }
+  ],
+  "entity_selector": [
+    {
+      "route_id": "6",
+      "direction_id": 0,
+      "new_shape_id": 1,
+      "FromToVia": null
+    },
+    {
+      "route_id": "4",
+      "direction_id": 0,
+      "new_shape_id": 1,
+      "FromToVia": null
+    },
+    {
+      "route_id": "6",
+      "direction_id": 1,
+      "new_shape_id": 1,
+      "FromToVia": null
+    },
+    {
+      "route_id": "4",
+      "direction_id": 1,
+      "new_shape_id": 1,
+      "FromToVia": null
+    }
+  ],
+  "start_datetime": {
+    "date": "2021-09-23",
+    "time": 17100
+  },
+  "end_datetime": {
+    "date": "2021-09-23",
+    "time": 57600
+  },
+  "recurs_every": {
+    "days": null,
+    "weeks": 1,
+    "weekday": [
+      4
+    ],
+    "ends_on": {
+      "date": "2021-12-23",
+      "time": 57600
+    },
+    "excluded_dates": null
+  }
 }
 ```
 
@@ -67,22 +335,102 @@ Detour: Right on Minnehaha, left on 39th, left on 42nd, right on Minnehaha
 #### sample
 ```json
 {
-	"service_adjustment_id": "3281yhfljksdh",
-	"detour_name": "EB Route 23 Detour Minnehaha to 42nd Ave",
-	"previous_adjustment_id": null,
-	"adjustment_types": ["detour"],
-	"skipped_stops": ["12549", "12545", "12541", "12537", "12533"],
-	"new_shapes": [{"new_shape_id": "0", "shape_segment": [
-		{"from_stop_id": "12551", "to_stop_id": "100001", "lat": [44.933815, 44.932398, 44.932372], "lon": [-93.223789, -93.219238, -93.222607]},
-		{"from_stop_id": "100001", "to_stop_id": "100002", "lat": [44.932398, 44.932430], "lon": [-93.219238, -93.216705]},
-		{"from_stop_id": "100002", "to_stop_id": "12529", "lat": [44.932430, 44.932458, 44.934266, 44.934230], "lon": [-93.216705, -93.212783, -93.212783, -93.210365]}
-	]}],
-	"new_stops": [{"stop_id": "12550"}, {"stop_id": "100001", "stop_lat": 44.932398, "stop_lon": -93.219238, "stop_name": "39th St & 37th Ave S"}, {"stop_id": "100002", "stop_lat": 44.932430, "stop_lon": -93.216705, "stop_name": "39th St & 39th Ave S"}],
-	"entity_selector": [{"route_id": "23", "direction_id": 0, "new_shape_id": 0}],
-	"start_date": {"date": "2021-10-13", "time": 57600},
-	"end_date": null,
-	"estimated_end_date": {"date": "2022-01-30", "time": 57600},
-	"recurrence": null
+  "service_adjustment_id": "3281yhfljksdh",
+  "detour_name": "EB Route 23 Detour Minnehaha to 42nd Ave",
+  "previous_adjustment_id": null,
+  "adjustment_types": [
+    "detour"
+  ],
+  "skipped_stops": [
+    "12549",
+    "12545",
+    "12541",
+    "12537",
+    "12533"
+  ],
+  "new_shapes": [
+    {
+      "new_shape_id": "0",
+      "shape_segment": [
+        {
+          "from_stop_id": "12551",
+          "to_stop_id": "100001",
+          "lat": [
+            44.933815,
+            44.932398,
+            44.932372
+          ],
+          "lon": [
+            -93.223789,
+            -93.219238,
+            -93.222607
+          ]
+        },
+        {
+          "from_stop_id": "100001",
+          "to_stop_id": "100002",
+          "lat": [
+            44.932398,
+            44.93243
+          ],
+          "lon": [
+            -93.219238,
+            -93.216705
+          ]
+        },
+        {
+          "from_stop_id": "100002",
+          "to_stop_id": "12529",
+          "lat": [
+            44.93243,
+            44.932458,
+            44.934266,
+            44.93423
+          ],
+          "lon": [
+            -93.216705,
+            -93.212783,
+            -93.212783,
+            -93.210365
+          ]
+        }
+      ]
+    }
+  ],
+  "new_stops": [
+    {
+      "stop_id": "12550"
+    },
+    {
+      "stop_id": "100001",
+      "stop_lat": 44.932398,
+      "stop_lon": -93.219238,
+      "stop_name": "39th St & 37th Ave S"
+    },
+    {
+      "stop_id": "100002",
+      "stop_lat": 44.93243,
+      "stop_lon": -93.216705,
+      "stop_name": "39th St & 39th Ave S"
+    }
+  ],
+  "entity_selector": [
+    {
+      "route_id": "23",
+      "direction_id": 0,
+      "new_shape_id": 0
+    }
+  ],
+  "start_date": {
+    "date": "2021-10-13",
+    "time": 57600
+  },
+  "end_date": null,
+  "estimated_end_date": {
+    "date": "2022-01-30",
+    "time": 57600
+  },
+  "recurrence": null
 }
 ```
 
@@ -120,40 +468,153 @@ Passengers directed to:
 #### sample
 ```json
 {
-	"service_adjustment_id": "32962",
-	"detour_name": "Concord Closed Hardman to Armour Phase 2",
-	"previous_adjustment_id": null,
-	"adjustment_types": ["detour"],
-	"skipped_stops": ["10064", "10065", "48729"],
-	"new_shapes": [
-		{"new_shape_id": "0", "shape_segment": [
-			{"from_stop_id": "10062", "to_stop_id": "10066", "lat": [44.933815, 44.932398, 44.932372], "lon": [-93.223789, -93.219238, -93.222607]},
-			]
-		},
-		{"new_shape_id": "1", "shape_segment": [
-			{"from_stop_id": "10062", "to_stop_id": "41150", "lat": [44.933815, 44.932398, 44.932372], "lon": [-93.223789, -93.219238, -93.222607]},
-			]
-		},
-		{"new_shape_id": "2", "shape_segment": [
-			{"from_stop_id": "10062", "to_stop_id": "80305", "lat": [44.933815, 44.932398, 44.932372], "lon": [-93.223789, -93.219238, -93.222607]},
-			]
-		},
-		{"new_shape_id": "3", "shape_segment": [
-			{"from_stop_id": "80305", "to_stop_id": "??Concord & Hardman", "lat": [44.933815, 44.932398, 44.932372], "lon": [-93.223789, -93.219238, -93.222607]},
-			]
-		}		
-	],
-	"new_stops": [],
-	"entity_selector": [
-		{"new_shape_id": 0, "route_id": "71", "direction_id": 1, "FromToVia": ["LCTCCHEL57","SLROCHEL57","SLROINCO70"]},
-		{"new_shape_id": 1, "route_id": "71", "direction_id": 1, "FromToVia": ["SLMCINCO70","SLROINCO70"]},
-		{"new_shape_id": 2, "route_id": "71", "direction_id": 1, "FromToVia": ["SLROCXCO61","LCTCCXCO61","SLROCXCO54","LREMCXCO54","SLROCXCO59","SLROCXCO53"]},
-		{"new_shape_id": 3, "route_id": "71", "direction_id": 0, "FromToVia": ["CXCOLCTC12","CXCOLCTC13","CXCOSLRO12","CXCOSLRO13","CXCOSLRO16","CXCOSLRO40"]},
-	],
-	"start_date": {"date": "2021-07-31", "time": 56700},
-	"end_date": null,
-	"estimated_end_date": {"date": "2022-07-31", "time": 52200},
-	"recurrence": null
+  "service_adjustment_id": "32962",
+  "detour_name": "Concord Closed Hardman to Armour Phase 2",
+  "previous_adjustment_id": null,
+  "adjustment_types": [
+    "detour"
+  ],
+  "skipped_stops": [
+    "10064",
+    "10065",
+    "48729"
+  ],
+  "new_shapes": [
+    {
+      "new_shape_id": "0",
+      "shape_segment": [
+        {
+          "from_stop_id": "10062",
+          "to_stop_id": "10066",
+          "lat": [
+            44.933815,
+            44.932398,
+            44.932372
+          ],
+          "lon": [
+            -93.223789,
+            -93.219238,
+            -93.222607
+          ]
+        }
+      ]
+    },
+    {
+      "new_shape_id": "1",
+      "shape_segment": [
+        {
+          "from_stop_id": "10062",
+          "to_stop_id": "41150",
+          "lat": [
+            44.933815,
+            44.932398,
+            44.932372
+          ],
+          "lon": [
+            -93.223789,
+            -93.219238,
+            -93.222607
+          ]
+        }
+      ]
+    },
+    {
+      "new_shape_id": "2",
+      "shape_segment": [
+        {
+          "from_stop_id": "10062",
+          "to_stop_id": "80305",
+          "lat": [
+            44.933815,
+            44.932398,
+            44.932372
+          ],
+          "lon": [
+            -93.223789,
+            -93.219238,
+            -93.222607
+          ]
+        }
+      ]
+    },
+    {
+      "new_shape_id": "3",
+      "shape_segment": [
+        {
+          "from_stop_id": "80305",
+          "to_stop_id": "??Concord & Hardman",
+          "lat": [
+            44.933815,
+            44.932398,
+            44.932372
+          ],
+          "lon": [
+            -93.223789,
+            -93.219238,
+            -93.222607
+          ]
+        }
+      ]
+    }
+  ],
+  "new_stops": [],
+  "entity_selector": [
+    {
+      "new_shape_id": 0,
+      "route_id": "71",
+      "direction_id": 1,
+      "FromToVia": [
+        "LCTCCHEL57",
+        "SLROCHEL57",
+        "SLROINCO70"
+      ]
+    },
+    {
+      "new_shape_id": 1,
+      "route_id": "71",
+      "direction_id": 1,
+      "FromToVia": [
+        "SLMCINCO70",
+        "SLROINCO70"
+      ]
+    },
+    {
+      "new_shape_id": 2,
+      "route_id": "71",
+      "direction_id": 1,
+      "FromToVia": [
+        "SLROCXCO61",
+        "LCTCCXCO61",
+        "SLROCXCO54",
+        "LREMCXCO54",
+        "SLROCXCO59",
+        "SLROCXCO53"
+      ]
+    },
+    {
+      "new_shape_id": 3,
+      "route_id": "71",
+      "direction_id": 0,
+      "FromToVia": [
+        "CXCOLCTC12",
+        "CXCOLCTC13",
+        "CXCOSLRO12",
+        "CXCOSLRO13",
+        "CXCOSLRO16",
+        "CXCOSLRO40"
+      ]
+    }
+  ],
+  "start_date": {
+    "date": "2021-07-31",
+    "time": 56700
+  },
+  "end_date": null,
+  "estimated_end_date": {
+    "date": "2022-07-31",
+    "time": 52200
+  },
+  "recurrence": null
 }
 ```
 
