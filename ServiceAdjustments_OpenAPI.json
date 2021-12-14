@@ -1,0 +1,1014 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "TM Service Adjustments",
+    "description": "Initial definition of TM Service Adjustments API.",
+    "termsOfService": "",
+    "contact": {
+      "name": "Joseph Reid",
+      "email": "joseph.reid@metrotransit.org",
+      "url": "https://svc.metrotransit.org"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "0.1.0"
+  },
+  "security": [{}],
+  "servers": [
+    {
+      "url": "https://svc.metrotransit.org/v2"
+    },
+    {
+      "url": "https://svc.metrotransittest.org/v2"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Adjustments",
+      "description": "Service adjustments formatted for ScheduleDB"
+    },
+    {
+      "name": "TripUpdate",
+      "description": "GTFS-realtime Service Changes Trip Updates",
+        "externalDocs": {
+          "description": "GTFS-realtime TripUpdate Message Specification",
+          "url": "https://gtfs.org/reference/realtime/v2/#message-tripupdate"
+        }
+    },
+    {
+      "name": "NewShapes",
+      "description": "GTFS-realtime Service Changes New Shapes"
+    },
+    {
+      "name": "NewTrips",
+      "description": "GTFS-realtime Service Changes New Trips"
+    },
+    {
+      "name": "NewRoutes",
+      "description": "GTFS-realtime Service Changes New Routes"
+    },
+    {
+      "name": "NewStops",
+      "description": "GTFS-realtime Service Changes New Stops"
+    },
+    {
+      "name": "ServiceUpdates",
+      "description": "GTFS-realtime Service Changes Service Updates"
+    }
+  ],
+  "paths": {
+    "/adjustments": {
+      "get": {
+        "tags": [
+          "Adjustments"
+        ],
+        "summary": "Retrieve TM Service Adjustments",
+        "description": "Multiple status values can be provided with comma separated strings",
+        "operationId": "getAdjustments",
+        "parameters": [
+          {
+            "name": "validFrom",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "validTo",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Adjustment"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tripupdate": {
+      "get": {
+        "tags": [
+          "TripUpdate"
+        ],
+        "summary": "Get TripUpdate Entities",
+        "description": "Returns a GTFS-realtime TripUpdates feed",
+        "operationId": "getTripUpdates",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TripUpdate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/newshapes": {
+      "get": {
+        "tags": [
+          "NewShapes"
+        ],
+        "summary": "Get Shape entities",
+        "description": "Returns GTFS-realtime ServiceChanges New Shapes Feed Entity",
+        "operationId": "getNewShapes",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Shape"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/newroutes": {
+      "get": {
+        "tags": [
+          "NewRoutes"
+        ],
+        "description": "Returns GTFS-realtime ServiceChanges New Routes Feed Entity",
+        "summary": "Get Route entities",
+        "operationId": "getNewRoutes",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Route"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/newstops": {
+      "get": {
+        "tags": [
+          "NewStops"
+        ],
+        "description": "Returns GTFS-realtime ServiceChanges New Stops Feed Entity",
+        "summary": "Get Stop entities",
+        "operationId": "getNewStops",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Stop"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/newtrips": {
+      "get": {
+        "tags": [
+          "NewTrips"
+        ],
+        "summary": "Get Trip entities",
+        "description": "Returns GTFS-realtime ServiceChanges New Trips Feed Entity",
+        "operationId": "getNewTrips",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Trip"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/serviceupdate": {
+      "get": {
+        "tags": [
+          "ServiceUpdates"
+        ],
+        "description": "Returns GTFS-realtime ServiceChanges ServiceUpdates Feed Entity",
+        "summary": "Get ServiceUpdate entities",
+        "operationId": "getServiceUpdates",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceUpdate"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TranslatedString": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "WheelchairAccessibleStatus": {
+        "type": "string",
+        "nullable": true,
+        "enum": ["UNKNOWN_WHEELCHAIR_BOARDING", "WHEELCHAIR_ACCESSIBLE", "NOT_WHEELCHAIR_ACCESSIBLE"],
+      },
+      "BikesAllowedStatus": {
+        "type": "string",
+        "nullable": true,
+        "enum": ["UNKNOWN_BIKES_ALLOWANCE", "BIKES_ALLOWED", "BIKES_NOT_ALLOWED"],
+      },
+      "PickupType": {
+        "type": "string",
+        "nullable": true,
+        "enum": ["REGULAR_PICKUP", "NO_PICKUP", "MUST_PHONE_AGENCY", "MUST_ASK_DRIVER"]
+      },
+      "DropOffType": {
+        "type": "string",
+        "nullable": true,
+        "enum": ["REGULAR_DROP_OFF", "NO_DROP_OFF", "MUST_PHONE_AGENCY", "MUST_ASK_DRIVER"]
+      },
+      "StopTime": {
+        "type": "object",
+        "properties": {
+          "stop_sequence": {
+            "type": "integer"
+          },
+          "arrival_time": {
+            "type": "integer",
+            "description": "integer seconds into day",
+            "example": 43200
+          },
+          "departure_time": {
+            "type": "integer",
+            "description": "integer seconds into day",
+            "example": 43260
+          },
+          "stop_id": {
+            "type": "string",
+            "example": "17990"
+          },
+          "stop_headsign": {
+            "allOf": [
+              {"nullable": true},
+              {"$ref": "#/components/schemas/TranslatedString"}
+            ]
+          },
+          "pickup_type": {
+            "allOf": [
+              {"example": "REGULAR_PICKUP"},
+              {"$ref": "#/components/schemas/PickupType"}
+            ]
+          },
+          "drop_off_type": {
+            "allOf": [
+              {"example": "REGULAR_DROP_OFF"},
+              {"$ref": "#/components/schemas/DropOffType"}
+            ]
+          },
+          "shape_dist_traveled": {
+            "nullable": true,
+            "type": "number",
+            "format": "float"
+          }
+        }
+      },
+      "Trip": {
+        "type": "object",
+        "description": "",
+        "nullable": true,
+        "properties": {
+          "trip_id": {
+            "type": "string",
+            "example": "20009384"
+          },
+          "route_id": {
+            "type": "string",
+            "nullable": true,
+            "example": "922"
+          },
+          "trip_headsign": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TranslatedString"
+              },
+              {
+                "example": {
+                  'TranslatedString': {"text": 'B Lake to Union Depot', "language": 'en'}
+                }
+              }
+            ]
+          },
+          "trip_short_name": {
+            "type": "string",
+            "nullable": true
+          },
+          "direction_id": {
+            "type": "integer",
+            "nullable": true,
+            "format": "int32",
+            "example": 0
+          },
+          "block_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "shape_id": {
+            "type": "string",
+            "nullable": true,
+            "example": "9220001-01"
+          },
+          "wheelchair_accessible": {
+            "$ref": "#/components/schemas/WheelchairAccessibleStatus"
+          },
+          "bikes_allowed": {
+            "$ref": "#/components/schemas/BikesAllowedStatus"
+          },
+          "stop_time": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StopTime"
+            }
+          },
+          "start_date": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "date",
+            }
+          }
+        }
+      },
+      "Stop": {
+        "type": "object",
+        "nullable": true,
+        "properties": {
+          "stop_id": {
+            "type": "string",
+            "example": "100001"
+          },
+          "stop_code": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TranslatedString"
+              },
+              {
+                "example": {
+                  'TranslatedString': {"text": '100001', "language": 'en'}
+                }
+              }
+            ]
+          },
+          "stop_name": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TranslatedString"
+              },
+              {
+                "example": null
+              }
+            ]
+          },
+          "stop_desc": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TranslatedString"
+              },
+              {
+                "example": {
+                  'TranslatedString': {"text": '38th St & 36th Ave', "language": 'en'}
+                }
+              }
+            ]
+          },
+          "stop_lat": {
+            "type": "number",
+            "example": 44.953123
+          },
+          "stop_lon": {
+            "type": "number",
+            "example": -93.129847
+          },
+          "zone_id": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          },
+          "stop_url": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TranslatedString"
+              },
+              {
+                "example": {
+                  'TranslatedString': {"text": 'https://www.metrotransit.org/nextrip/100001', "language": 'en'}
+                }
+              }
+            ]
+          },
+          "parent_station": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          },
+          "stop_timezone": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          },
+          "wheelchair_boarding": {
+            "$ref": "#/components/schemas/WheelchairAccessibleStatus"
+          },
+          "level_id": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          },
+          "platform_code": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          }
+        }
+      },
+      "Route": {
+        "type": "object",
+        "nullable": true,
+        "properties": {
+          "route_id": {
+            "type": "string",
+            "example": "991"
+          },
+          "agency_id": {
+            "type": "string",
+            "example": "1"
+          },
+          "route_short_name": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TranslatedString"
+              },
+              {
+                "example": {
+                  'TranslatedString': {"text": '991', "language": 'en'}
+                }
+              }
+            ]
+          },
+          "route_long_name": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TranslatedString"
+              },
+              {
+                "example": {
+                  'TranslatedString': {"text": 'Blue Line Replacement Shuttle', "language": 'en'}
+                }
+              }
+            ]
+          },
+          "route_desc": {
+            "nullable": true,
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TranslatedString"
+              },
+              {
+                "example": null
+              }
+            ]
+          },
+          "route_type": {
+            "type": "string",
+            "enum": ["LIGHT_RAIL", "SUBWAY", "RAIL", "BUS", "FERRY", "CABLE_CAR", "GONDOLA", "FUNICULAR", "TROLLEY_BUS", "MONORAIL"],
+            "example": "BUS"
+          },
+          "route_color": {
+            "type": "string",
+            "nullable": true,
+            "example": "0000FF"
+          },
+          "route_text_color": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          },
+          "route_sort_order": {
+            "type": "number",
+            "format": "int32",
+            "nullable": true,
+            "example": null
+          }
+        }
+      },
+      "Shape": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "shape_id": {
+            "type": "string",
+            "example": "20001-01"
+          },
+          "encoded_polyline": {
+            "type": "string",
+            "description": "Encoded polyline representation of the shape. This polyline must contain at least two points. For more information about encoded polylines, see https://developers.google.com/maps/documentation/utilities/polylinealgorithm",
+            "example": "f134hvd~98"
+          }
+        }
+      },
+      "TripUpdate": {
+        "type": "object",
+        "description": "GTFS-realtime TripUpdate Entity",
+        "externalDocs": {
+          "description": "GTFS-realtime TripUpdate Message Specification",
+          "url": "https://gtfs.org/reference/realtime/v2/#message-tripupdate"
+        },
+        "properties": {
+          "TripDescriptor": {
+            "$ref": "#/components/schemas/TripDescriptor"
+          },
+          "VehicleDescriptor": {
+            "$ref": "#/components/schemas/VehicleDescriptor"
+          },
+          "stop_time_update": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StopTimeUpdate"
+            }
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2021-11-30T13:51:00Z"
+          },
+          "delay": {
+            "type": "integer",
+            "format": "int32",
+            "example": 300
+          },
+          "trip_properties": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "trip_id": {
+                "type": "string",
+                "example": "19987534"
+              },
+              "start_date": {
+                "type": "string",
+                "nullable": true,
+                "format": "date",
+                "example": "2021-11-30"
+              },
+              "start_time": {
+                "type": "integer",
+                "nullable": true,
+                "format": "int32",
+                "example": 32760
+              },
+              "shape_id": {
+                "type":"string",
+                "nullable": true,
+                "example": "9230021-01"
+              },
+              "route_id": {
+                "type":"string",
+                "nullable": true,
+                "example": null
+              }
+            }
+          }
+        }
+      },
+      "TripDescriptor": {
+        "type": "object",
+        "externalDocs": {
+          "description": "GTFS-realtime TripDescriptor Specification",
+          "url": "https://gtfs.org/reference/realtime/v2/#message-tripdescriptor"
+        },
+        "properties": {
+          "trip_id": {
+            "type": "string",
+            "nullable": true,
+            "example": "17999392"
+          },
+          "route_id": {
+            "type": "string",
+            "nullable": true,
+            "example": "923"
+          },
+          "direction_id": {
+            "type": "integer",
+            "nullable": true,
+            "format": "int32",
+            "example": 0
+          },
+          "start_time": {
+            "type": "integer",
+            "nullable": true,
+            "format": "int32",
+            "example": 32760
+          },
+          "start_date": {
+            "type": "string",
+            "nullable": true,
+            "format": "date",
+            "example": "2021-11-30"
+          },
+          "schedule_relationship": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "SCHEDULED",
+              "ADDED",
+              "UNSCHEDULED",
+              "CANCELED",
+              "DUPLICATED"
+            ],
+            "example": "DUPLICATED"
+          }
+        }
+      },
+      "VehicleDescriptor": {
+        "description": "Identifying information for vehicle providing the trip",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true,
+            "example": "3456"
+          },
+          "label": {
+            "type": "string",
+            "nullable": true,
+            "example": "8108"
+          },
+          "license_plate": {
+            "type": "string",
+            "nullable": true,
+            "example": null
+          }
+        }
+      },
+      "StopTimeUpdate": {
+        "description": "Realtime update for arrival and/or departure events for a given stop on a trip",
+        "type": "object",
+        "properties": {
+          "stop_sequence": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "example": 1
+          },
+          "stop_id": {
+            "type": "string",
+            "nullable": true,
+            "example": "17790"
+          },
+          "arrival": {
+            "$ref": "#/components/schemas/StopTimeEvent"
+          },
+          "departure": {
+            "$ref": "#/components/schemas/StopTimeEvent"
+          },
+          "schedule_relationship": {
+            "type": "string",
+            "nullable": true,
+            "enum": ["SCHEDULED", "SKIPPED", "NO_DATA", "UNSCHEDULED"]
+          }
+        }
+      },
+      "StopTimeEvent": {
+      	"type": "object",
+      	"nullable": true,
+      	"description": "Timing information for a single predicted event (either arrival or departure). One of `delay` or `time` must be provided.",
+      	"properties": {
+      		"delay": {
+      			"type": "integer",
+      			"format": "int32",
+      			"example": 60,
+      			"nullable": true
+      		},
+      		"time": {
+      			"type": "number",
+      			"example": 1638287346,
+      			"nullable": true
+      		},
+      		"uncertainty": {
+      			"type": "integer",
+      			"format": "int32",
+      			"example": 0,
+      			"nullable": true
+      		}
+      	}
+      },
+      "ExceptionType": {
+        "description": "Determines whether service is available on the date specified in ServiceUpdate",
+        "type": "string",
+        "enum": ["ADDED", "REMOVED"]
+      },
+      "ServiceUpdate": {
+      	"type": "object",
+      	"nullable": true,
+      	"description": "",
+      	"properties": {
+      		"service_id": {
+      			"type": "string",
+      			"description": "Refers to GTFS service_id in calendars.txt or calendar_dates.txt",
+      			"example": "DEC21-MVS-BUS-MPS-01"
+      		},
+      		"date": {
+      			"type": "string",
+      			"example": "2021-12-24",
+      		},
+      		"exception_type": {
+      		  "allOf": [
+      			  {"$ref": "#/components/schemas/ExceptionType"},
+      			  {"example": "REMOVED"}
+      			]
+      		}
+      	}
+      },
+      "AdjustmentType": {
+        "type": "string",
+        "description": "Type of service adjustment",
+        "enum": [
+            "DETOUR",
+            "STOP_CLOSURE"
+          ]
+      },
+      "ShapeSegment": {
+        "type": "object",
+        "description": "Defines a sequence of points between stops. Segments start at the last stop of the regular routing (or first stop of the trip) and end at the first stop on return to regular routing (or last stop of the trip).",
+        "properties": {
+          "from_stop_id": {
+            "type": "string",
+            "example": "19333"
+          },
+          "to_stop_id": {
+            "type": "string",
+            "example": "53311"
+          },
+          "lat": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "float"
+            },
+            "example": [44.9731,44.9729,44.9728,44.9728,44.9727,44.9726,44.972,44.9714,44.9709,44.9717]
+          },
+          "lon": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "float"
+            },
+            "example":[-93.2789,-93.2788,-93.2786,-93.2783,-93.278,-93.2778,-93.2763,-93.2749,-93.2735,-93.2728]
+          }
+        }
+      },
+      "EntitySelectorSDB": {
+        "type": "object",
+        "description": "Selector for service in ScheduleDB",
+        "properties": {
+          "route_id": {
+            "type": "string",
+            "example": "71"
+          },
+          "direction_id": {
+            "type": "integer",
+            "nullable": true,
+            "example": 1
+          },
+          "FromToVia": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            },
+            "example": ["SLROCXCO53"]
+          }
+        }
+      },
+      "Recurrence": {
+        "type": "object",
+        "description": "Recurrence configuration",
+        "nullable": true,
+        "properties": {
+          "days": {
+            "type": "integer",
+            "nullable": true,
+            "example": null,
+            "description": "recurs every X days"
+          },
+          "weeks": {
+            "type": "integer",
+            "nullable": true,
+            "example": 1,
+            "description": "recurs every X weeks"
+          },
+          "weekday": {
+            "description": "Which days of week to recur on (0, 7 are Sunday)",
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "example": [4]
+            }
+          }, 
+          "ends_on": {
+            "description": "End date and time for repeating event, inclusive",
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date",
+                "example": "2021-12-23"
+              },
+              "time": {
+                "type": "integer",
+                "example": 43600
+              }
+            }
+          }, 
+          "excluded_dates": {
+            "description": "Date exclusions for recurring events",
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "date",
+              "example": ["2021-12-23"]
+            }
+          }
+        }
+      },
+      "Adjustment": {
+        "type": "object",
+        "properties": {
+          "service_adjustment_id": {
+            "type": "string",
+            "format": "string",
+            "example": "237yedfhkjsdn"
+          },
+          "previous_adjustment_id": {
+            "type": "string",
+            "format": "string",
+            "nullable": true,
+            "example": null
+          },
+          "detour_name": {
+            "type": "string",
+            "format": "string",
+            "example": "Nicollet Mall Farmer's Market NB routes 4, 6, 12"
+          },
+          "adjustment_type": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AdjustmentType"
+            },
+            "example": "DETOUR"
+          },
+          "skipped_stops": {
+            "type": "array",
+            "nullable": true,
+            "description": "list of skipped stop_ids",
+            "items": {
+              "type": "string",
+              "example": ["17990", "17992", "17994", "17996", "17998"]
+            }
+          },
+          "new_shapes": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "new_shape_id": {
+                "type": "string"
+              },
+              "shape_segment": {
+                "type":"array",
+                "items": {
+                  "$ref": "#/components/schemas/ShapeSegment"
+                }
+              }
+            }
+          },
+          "new_stops": {
+            "type": "array",
+            "description": "list of stops newly served by detour",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Stop"
+            }
+          },
+          "entity_selector": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EntitySelectorSDB"
+            }
+          },
+          "start_datetime": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date",
+                "example": "2021-09-23"
+              }, 
+              "time": {
+                "type": "integer",
+                "description": "integer seconds since midnight, local time",
+                "example": 17100
+              }
+            }
+          },
+	        "end_datetime": {
+	          "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date",
+                "example": "2021-09-23"
+              }, 
+              "time": {
+                "type": "integer",
+                "description": "integer seconds since midnight, local time",
+                "example": 57600
+              }
+            }
+	        },
+	        "recurs_every": {
+	          "$ref": "#/components/schemas/Recurrence"
+	        }
+        }
+      }
+    }
+  }
+}
