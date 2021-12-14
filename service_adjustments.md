@@ -23,11 +23,11 @@
 ### Example: NB Nicollet Mall detour
 Detour:
 
-- 19333 to 53311
+- 19333 (entry stop) to 53311
 - 53311 to 53312
 - 53312 to 53313
 - 53313 to 53314
-- 53314 to 17950
+- 53314 to 17950 (exit stop)
 
 #### sample
 *new_shape_id 1 isn't correct, but accurately portrays the data layout*
