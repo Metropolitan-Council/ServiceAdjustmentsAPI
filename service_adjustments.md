@@ -55,9 +55,9 @@ Detour:
 	],
 	"new_stops": [{"stop_id": "53311"}, {"stop_id": "53312"}, {"stop_id": "53313"}, {"stop_id": "53314"}],
 	"entity_selector": [{"route_id": "6", "direction_id": 0, "new_shape_id": 1, "FromToVia": null}, {"route_id": "4", "direction_id": 0, "new_shape_id": 1, "FromToVia": null}, {"route_id": "6", "direction_id": 1, "new_shape_id": 1, "FromToVia": null}, {"route_id": "4", "direction_id": 1, "new_shape_id": 1, "FromToVia": null}],
-	"start_datetime": {"date": "2021-09-23", "time": "04:45:00"},
-	"end_datetime": {"date": "2021-09-23", "time": "16:00:00"},
-	"recurs_every": {"days": null, "weeks": 1, "weekday": [4], "ends_on": {"date": "2021-12-23", "time": "16:00:00"}, "excluded_dates": null},
+	"start_datetime": {"date": "2021-09-23", "time": 17100},
+	"end_datetime": {"date": "2021-09-23", "time": 57600},
+	"recurs_every": {"days": null, "weeks": 1, "weekday": [4], "ends_on": {"date": "2021-12-23", "time": 57600}, "excluded_dates": null},
 }
 ```
 
@@ -79,10 +79,10 @@ Detour: Right on Minnehaha, left on 39th, left on 42nd, right on Minnehaha
 	]}],
 	"new_stops": [{"stop_id": "12550"}, {"stop_id": "100001", "stop_lat": 44.932398, "stop_lon": -93.219238, "stop_name": "39th St & 37th Ave S"}, {"stop_id": "100002", "stop_lat": 44.932430, "stop_lon": -93.216705, "stop_name": "39th St & 39th Ave S"}],
 	"entity_selector": [{"route_id": "23", "direction_id": 0, "new_shape_id": 0}],
-	"start_date": "2021-10-13T11:00:00Z",
+	"start_date": {"date": "2021-10-13", "time": 57600},
 	"end_date": null,
-	"estimated_end_date": "2099-01-01T00:00:00Z",
-	"recurrence": {"month": null, "weekday": null, "day": null, "hour": null}
+	"estimated_end_date": {"date": "2022-01-30", "time": 57600},
+	"recurrence": null
 }
 ```
 
@@ -150,9 +150,9 @@ Passengers directed to:
 		{"new_shape_id": 2, "route_id": "71", "direction_id": 1, "FromToVia": ['SLROCXCO61','LCTCCXCO61','SLROCXCO54','LREMCXCO54','SLROCXCO59','SLROCXCO53']},
 		{"new_shape_id": 3, "route_id": "71", "direction_id": 0, "FromToVia": ['CXCOLCTC12','CXCOLCTC13','CXCOSLRO12','CXCOSLRO13','CXCOSLRO16','CXCOSLRO40']},
 	],
-	"start_date": "2021-07-31T20:45:00Z",
+	"start_date": {"date": "2021-07-31", "time": 56700},
 	"end_date": null,
-	"estimated_end_date": "2021-09-29T19:30:00Z",
+	"estimated_end_date": {"date": "2022-07-31", "time": 52200},
 	"recurrence": null
 }
 ```
