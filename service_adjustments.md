@@ -9,17 +9,14 @@
 ### Design decisions
 - Detours start and end at the last regular service stop and first resumed stop.
 - **TODO**: loops (when a stop\_id is repeated in a trip), GTFS stop\_times.txt is keyed on trip\_id, stop\_sequence, but that makes adjustment applicable to specific FromToVia, not just route\_id-direction\_id combinations. Shapes in ScheduleDB are constructed from OriginStop-DestinationStop pairs, which can be derived from the stop-sequence.
-- **TODO**: recurrence
-  - Crontab style: minute (0-59), hour (0-23), day of month (1-31), month (1-12), day of week (0-6)
-  - Launchd style: CalendarInterval: Month (1-12), Weekday (0, 7 are Sunday), Day (1-31), Hour (0-23), Minute (0-59)
-  - TM Detour Scheduling:
-    - Start date
-    - End date
-    - Start time
-    - End time
-    - Recurs every X {days, weeks}
-    - Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-    - Excluded dates
+- Transit Master Recurrence
+	- Start date
+	- End date
+	- Start time
+	- End time
+	- Recurs every X {days, weeks}
+	- Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+	- Excluded dates
 
  
 
