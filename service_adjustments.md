@@ -31,7 +31,7 @@ Detour:
 
 #### sample
 *new_shape_id 1 isn't correct, but accurately portrays the data layout*
-```javascript
+```json
 {
 	"service_adjustment_id": "129861r09ruqw0",
 	"detour_name": "Nicollet Mall Farmer's Market NB routes 4, 6, 12",
