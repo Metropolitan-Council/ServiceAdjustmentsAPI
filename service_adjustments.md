@@ -806,8 +806,8 @@ api path: `adjustments/v1/newstops`
 {
 	"stop":
 		[
-			{"stop_id": "100001", "stop_name": "39th St at 37th Ave", "stop_lat": 44.24, "stop_lon": -93.5},
-			{"stop_id": "100002", "stop_code": "100002", "stop_name": "39th St at 39th Ave", "stop_desc": "Nearside", "stop_lat": 44.24, "stop_lon": -93.5, "zone_id": "1", "stop_url": "https://www.metrotransit.org/nextrip/100002", "parent_station": null, "stop_timezome": null, "wheelchair_boarding": null, "level_id": null, "platform_code": null}
+			{"stop_id": "100001", "stop_name": "39th St & 37th Ave", "stop_lat": 44.24, "stop_lon": -93.5},
+			{"stop_id": "100002", "stop_code": "100002", "stop_name": "39th St & 39th Ave", "stop_desc": "Nearside", "stop_lat": 44.24, "stop_lon": -93.5, "zone_id": "1", "stop_url": "https://www.metrotransit.org/nextrip/100002", "parent_station": null, "stop_timezome": null, "wheelchair_boarding": null, "level_id": null, "platform_code": null}
 		]
 }
 ```
