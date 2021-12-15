@@ -9,6 +9,7 @@
 ### Design decisions
 - Detours start and end at the last regular service stop and first resumed stop.
 - **TODO**: loops (when a stop\_id is repeated in a trip), GTFS stop\_times.txt is keyed on trip\_id, stop\_sequence, but that makes adjustment applicable to specific FromToVia, not just route\_id-direction\_id combinations. Shapes in ScheduleDB are constructed from OriginStop-DestinationStop pairs, which can be derived from the stop-sequence.
+- Times are local date (`%Y-%m-%d`) and integer time, e.g. `{"date": "2021-12-15", "time": 9000}` for "2021-12-15 02:30:00 America/Chicago".
 - Transit Master Recurrence
 	- Start date
 	- End date
