@@ -26,6 +26,13 @@
  
 
 ### Example: NB Nicollet Mall detour
+This example illustrates:
+
+- response format
+- entry/exit stops in `new_shapes`
+- simple recurrence (every Thursday)
+
+
 Detour:
 
 - 19333 (entry stop) to 53311
@@ -335,6 +342,10 @@ Detour:
 ```
 
 ### Example: EB Route 23 Detour Minnehaha to 42nd Ave
+This example illustrates:
+
+- defining new temporary stops
+
 Detour: Right on Minnehaha, left on 39th, left on 42nd, right on Minnehaha
 
 #### sample
@@ -440,6 +451,12 @@ Detour: Right on Minnehaha, left on 39th, left on 42nd, right on Minnehaha
 ```
 
 ### Example: Concord Closed Hardman to Armour Phase 2
+This example illustrates:
+
+- matching new shapes to specific route variants with the `entity_selector` property
+
+Detour:
+
 Rt. 71 #32962 Start: 7/31/21 @345p End: Indef
 
 Due to Concord St improvement project. Starting 7/31/21
