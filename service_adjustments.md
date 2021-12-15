@@ -435,7 +435,7 @@ Detour: Right on Minnehaha, left on 39th, left on 42nd, right on Minnehaha
     "date": "2022-01-30",
     "time": 57600
   },
-  "recurrence": null
+  "recurs_every": null
 }
 ```
 
@@ -619,7 +619,7 @@ Passengers directed to:
     "date": "2022-07-31",
     "time": 52200
   },
-  "recurrence": null
+  "recurs_every": null
 }
 ```
 
