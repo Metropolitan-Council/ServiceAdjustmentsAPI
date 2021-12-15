@@ -6,9 +6,13 @@
 
 ## Adjusted Schedule Data Loader
 
+### TODO
+- **Loops** (when a stop\_id is repeated in a trip): GTFS stop\_times.txt is keyed on trip\_id, stop\_sequence, but that makes adjustment applicable to specific FromToVia, not just route\_id-direction\_id combinations. Shapes in ScheduleDB are constructed from OriginStop-DestinationStop pairs, which can be derived from the stop-sequence.
+- **Metadata**: do we want information about who created the adjustment, notes, other information about the process of making the detour rather than the actual detour itself?
+- **Recurrence**: is the existing recurrence framework sufficient? Would we ever want to schedule a detour that happens every 3rd Thursday of the month? This isn't possible with the current options in Transit Master, would need to add day-of-month, week-of-month fields. What scheduled but not repeating detours, for example, suppose we detour routes around some stadium during a sports team's home game schedule. We'd know which dates the detour applies to, but they wouldn't fit into a repeating framework without relying heavily on the `excluded_dates` field. Maybe a `specified_dates` field would work?
+
 ### Design decisions
 - Detours start and end at the last regular service stop and first resumed stop.
-- **TODO**: loops (when a stop\_id is repeated in a trip), GTFS stop\_times.txt is keyed on trip\_id, stop\_sequence, but that makes adjustment applicable to specific FromToVia, not just route\_id-direction\_id combinations. Shapes in ScheduleDB are constructed from OriginStop-DestinationStop pairs, which can be derived from the stop-sequence.
 - Times are local date (`%Y-%m-%d`) and integer time, e.g. `{"date": "2021-12-15", "time": 9000}` for "2021-12-15 02:30:00 America/Chicago".
 - Transit Master Recurrence
 	- Start date
