@@ -10,8 +10,8 @@
       "url": "https://svc.metrotransit.org"
     },
     "license": {
-      "name": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      "name": "MIT",
+      "url": "https://spdx.org/licenses/MIT.html"
     },
     "version": "0.1.0"
   },
