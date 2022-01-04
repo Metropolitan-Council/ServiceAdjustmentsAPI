@@ -65,7 +65,7 @@
           "Adjustments"
         ],
         "summary": "Retrieve TM Service Adjustments",
-        "description": "Multiple status values can be provided with comma separated strings",
+        "description": "",
         "operationId": "getAdjustments",
         "parameters": [
           {
