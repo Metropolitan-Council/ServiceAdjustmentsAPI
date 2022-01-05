@@ -1,9 +1,5 @@
 # WORKING DRAFT Service Adjustments API Design
 
-## Design
-- TM service adjustment contains all routes with identical detours
-- both directions packaged into a single detour
-
 ## Adjusted Schedule Data Loader
 
 ### TODO
