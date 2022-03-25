@@ -417,13 +417,15 @@ Detour: Right on Minnehaha, left on 39th, left on 42nd, right on Minnehaha
       "stop_id": "100001",
       "stop_lat": 44.932398,
       "stop_lon": -93.219238,
-      "stop_name": "39th St & 37th Ave S"
+      "stop_name": "39th St & 37th Ave S",
+      "corner_type": "Nearside"
     },
     {
       "stop_id": "100002",
       "stop_lat": 44.93243,
       "stop_lon": -93.216705,
-      "stop_name": "39th St & 39th Ave S"
+      "stop_name": "39th St & 39th Ave S",
+      "corner_type": "Nearside"
     }
   ],
   "entity_selector": [
