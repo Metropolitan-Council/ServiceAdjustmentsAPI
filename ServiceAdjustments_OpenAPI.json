@@ -945,11 +945,11 @@
               "example": ["17990", "17992", "17994", "17996", "17998"]
             }
           },
-          "new_shapes": {
+          "adjustment_shapes": {
             "type": "object",
             "nullable": true,
             "properties": {
-              "new_shape_id": {
+              "adjustment_shape_id": {
                 "type": "string"
               },
               "shape_segment": {
