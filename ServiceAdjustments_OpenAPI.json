@@ -499,6 +499,12 @@
             "enum": ["Nearside", "Farside", "Midblock", "Across From"],
             "nullable": true,
             "example": null
+          },
+          "corner_direction": {
+            "type": "string",
+            "enum": ["Northbound", "Eastbound", "Southbound", "Westbound"],
+            "nullable": true,
+            "example": null
           }
         }
       },
