@@ -493,6 +493,12 @@
             "type": "string",
             "nullable": true,
             "example": null
+          },
+          "corner_type": {
+            "type": "string",
+            "enum": ["Nearside", "Farside", "Midblock", "Across From"],
+            "nullable": true,
+            "example": null
           }
         }
       },
