@@ -822,6 +822,10 @@
             "type": "string",
             "example": "53311"
           },
+          "path_name": {
+            "type": "string",
+            "nullable": true
+          },
           "lat": {
             "type": "array",
             "items": {
