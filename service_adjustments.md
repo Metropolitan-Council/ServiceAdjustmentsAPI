@@ -25,7 +25,7 @@
 This example illustrates:
 
 - response format
-- entry/exit stops in `new_shapes`
+- entry/exit stops in `adjustment_shapes`
 - simple recurrence (every Thursday)
 
 
@@ -38,7 +38,7 @@ Detour:
 - 53314 to 17950 (exit stop)
 
 #### sample
-*new_shape_id 1 isn't correct, but accurately portrays the data layout*
+*adjustment_shape_id 1 isn't correct, but accurately portrays the data layout*
 ```json
 {
   "service_adjustment_id": "129861r09ruqw0",
@@ -54,9 +54,9 @@ Detour:
     "17996",
     "17998"
   ],
-  "new_shapes": [
+  "adjustment_shapes": [
     {
-      "new_shape_id": "0",
+      "adjustment_shape_id": "0",
       "shape_segment": [
         {
           "from_stop_id": "19333",
@@ -165,7 +165,7 @@ Detour:
       ]
     },
     {
-      "new_shape_id": "1",
+      "adjustment_shape_id": "1",
       "shape_segment": [
         {
           "from_stop_id": "19333",
@@ -292,25 +292,25 @@ Detour:
     {
       "route_id": "6",
       "direction_id": 0,
-      "new_shape_id": 1,
+      "adjustment_shape_id": 1,
       "FromToVia": null
     },
     {
       "route_id": "4",
       "direction_id": 0,
-      "new_shape_id": 1,
+      "adjustment_shape_id": 1,
       "FromToVia": null
     },
     {
       "route_id": "6",
       "direction_id": 1,
-      "new_shape_id": 1,
+      "adjustment_shape_id": 1,
       "FromToVia": null
     },
     {
       "route_id": "4",
       "direction_id": 1,
-      "new_shape_id": 1,
+      "adjustment_shape_id": 1,
       "FromToVia": null
     }
   ],
@@ -360,9 +360,9 @@ Detour: Right on Minnehaha, left on 39th, left on 42nd, right on Minnehaha
     "12537",
     "12533"
   ],
-  "new_shapes": [
+  "adjustment_shapes": [
     {
-      "new_shape_id": "0",
+      "adjustment_shape_id": "0",
       "shape_segment": [
         {
           "from_stop_id": "12551",
@@ -430,7 +430,7 @@ Detour: Right on Minnehaha, left on 39th, left on 42nd, right on Minnehaha
     {
       "route_id": "23",
       "direction_id": 0,
-      "new_shape_id": 0
+      "adjustment_shape_id": 0
     }
   ],
   "start_date": {
@@ -459,19 +459,19 @@ Due to Concord St improvement project. Starting 7/31/21
 
 **Buses continuing past CXCO**:
 - Route 71 A/D
-- SB (new_shape_id 0): Reg Concord to R Central (next street after Bryant), L-10th Ave N, R-Thompson, L-12th Ave N, L- Southview, L- 3rd Ave S onto Grand Ave, R- Hardman, R- Armour, L- Concord & reg.
+- SB (adjustment_shape_id 0): Reg Concord to R Central (next street after Bryant), L-10th Ave N, R-Thompson, L-12th Ave N, L- Southview, L- 3rd Ave S onto Grand Ave, R- Hardman, R- Armour, L- Concord & reg.
 - NB: Concord to R- Armour, L- Hardman, R- Concord & Reg
  
 **Buses Laying over at Concord Exchange**:
 
 - 71 B/E
-- SB (new_shape_id 2): Reg Concord to R Central (next street after Bryant), L-10th Ave N, R-Thompson, L-12th Ave N, L- Southview, L- 3rd Ave S onto Grand Ave, R- Hardman, R - Villaume, R - Farwell, Layover on Farwell at Armour
-- NB (new_shape_id 3): From Layover R- Armour, L-Hardman, R- Concord & Reg.
+- SB (adjustment_shape_id 2): Reg Concord to R Central (next street after Bryant), L-10th Ave N, R-Thompson, L-12th Ave N, L- Southview, L- 3rd Ave S onto Grand Ave, R- Hardman, R - Villaume, R - Farwell, Layover on Farwell at Armour
+- NB (adjustment_shape_id 3): From Layover R- Armour, L-Hardman, R- Concord & Reg.
 
 **P/I & Deadhead buses ending at Concord Exchange**:
 
 - 71 ??
-- SB (new_shape_id 4): Reg Concord to R Central (next street after Bryant), L-10th Ave N, R-Thompson, L-12th Ave N, L- Southview, L- 3rd Ave S onto Grand Ave, R- Veteran's Memorial DR, L- Concord Exchange, R- Grand, R- Hardman, R - Armour, L - Concord, to 494 and reg
+- SB (adjustment_shape_id 4): Reg Concord to R Central (next street after Bryant), L-10th Ave N, R-Thompson, L-12th Ave N, L- Southview, L- 3rd Ave S onto Grand Ave, R- Veteran's Memorial DR, L- Concord Exchange, R- Grand, R- Hardman, R - Armour, L - Concord, to 494 and reg
 
 Passengers directed to:
 
@@ -497,9 +497,9 @@ Passengers directed to:
     "10065",
     "48729"
   ],
-  "new_shapes": [
+  "adjustment_shapes": [
     {
-      "new_shape_id": "0",
+      "adjustment_shape_id": "0",
       "shape_segment": [
         {
           "from_stop_id": "10062",
@@ -518,7 +518,7 @@ Passengers directed to:
       ]
     },
     {
-      "new_shape_id": "1",
+      "adjustment_shape_id": "1",
       "shape_segment": [
         {
           "from_stop_id": "10062",
@@ -537,7 +537,7 @@ Passengers directed to:
       ]
     },
     {
-      "new_shape_id": "2",
+      "adjustment_shape_id": "2",
       "shape_segment": [
         {
           "from_stop_id": "10062",
@@ -556,7 +556,7 @@ Passengers directed to:
       ]
     },
     {
-      "new_shape_id": "3",
+      "adjustment_shape_id": "3",
       "shape_segment": [
         {
           "from_stop_id": "80305",
@@ -578,7 +578,7 @@ Passengers directed to:
   "new_stops": [],
   "entity_selector": [
     {
-      "new_shape_id": 0,
+      "adjustment_shape_id": 0,
       "route_id": "71",
       "direction_id": 1,
       "FromToVia": [
@@ -588,7 +588,7 @@ Passengers directed to:
       ]
     },
     {
-      "new_shape_id": 1,
+      "adjustment_shape_id": 1,
       "route_id": "71",
       "direction_id": 1,
       "FromToVia": [
@@ -597,7 +597,7 @@ Passengers directed to:
       ]
     },
     {
-      "new_shape_id": 2,
+      "adjustment_shape_id": 2,
       "route_id": "71",
       "direction_id": 1,
       "FromToVia": [
@@ -610,7 +610,7 @@ Passengers directed to:
       ]
     },
     {
-      "new_shape_id": 3,
+      "adjustment_shape_id": 3,
       "route_id": "71",
       "direction_id": 0,
       "FromToVia": [
