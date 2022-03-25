@@ -939,6 +939,12 @@
             "format": "string",
             "example": "Nicollet Mall Farmer's Market NB routes 4, 6, 12"
           },
+          "comments": {
+            "type": "string",
+            "format": "string",
+            "nullable": true,
+            "example": null
+          },
           "adjustment_type": {
             "type": "array",
             "items": {
