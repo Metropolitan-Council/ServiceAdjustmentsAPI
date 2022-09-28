@@ -261,7 +261,7 @@
         "type": "object",
         "properties": {
           "text": {
-            "type": "string",
+            "type": "string"
           },
           "language": {
             "type": "string",
@@ -272,12 +272,12 @@
       "WheelchairAccessibleStatus": {
         "type": "string",
         "nullable": true,
-        "enum": ["UNKNOWN_WHEELCHAIR_BOARDING", "WHEELCHAIR_ACCESSIBLE", "NOT_WHEELCHAIR_ACCESSIBLE"],
+        "enum": ["UNKNOWN_WHEELCHAIR_BOARDING", "WHEELCHAIR_ACCESSIBLE", "NOT_WHEELCHAIR_ACCESSIBLE"]
       },
       "BikesAllowedStatus": {
         "type": "string",
         "nullable": true,
-        "enum": ["UNKNOWN_BIKES_ALLOWANCE", "BIKES_ALLOWED", "BIKES_NOT_ALLOWED"],
+        "enum": ["UNKNOWN_BIKES_ALLOWANCE", "BIKES_ALLOWED", "BIKES_NOT_ALLOWED"]
       },
       "PickupType": {
         "type": "string",
@@ -355,7 +355,7 @@
               },
               {
                 "example": {
-                  'TranslatedString': {"text": 'B Lake to Union Depot', "language": 'en'}
+                  "TranslatedString": {"text": "B Lake to Union Depot", "language": "en"}
                 }
               }
             ]
@@ -395,7 +395,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "format": "date",
+              "format": "date"
             }
           }
         }
@@ -416,7 +416,7 @@
               },
               {
                 "example": {
-                  'TranslatedString': {"text": '100001', "language": 'en'}
+                  "TranslatedString": {"text": "100001", "language": "en"}
                 }
               }
             ]
@@ -440,7 +440,7 @@
               },
               {
                 "example": {
-                  'TranslatedString': {"text": '38th St & 36th Ave', "language": 'en'}
+                  "TranslatedString": {"text": "38th St & 36th Ave", "language": "en"}
                 }
               }
             ]
@@ -466,7 +466,7 @@
               },
               {
                 "example": {
-                  'TranslatedString': {"text": 'https://www.metrotransit.org/nextrip/100001', "language": 'en'}
+                  "TranslatedString": {"text": "https://www.metrotransit.org/nextrip/100001", "language": "en"}
                 }
               }
             ]
@@ -528,7 +528,7 @@
               },
               {
                 "example": {
-                  'TranslatedString': {"text": '991', "language": 'en'}
+                  "TranslatedString": {"text": "991", "language": "en"}
                 }
               }
             ]
@@ -541,7 +541,7 @@
               },
               {
                 "example": {
-                  'TranslatedString': {"text": 'Blue Line Replacement Shuttle', "language": 'en'}
+                  "TranslatedString": {"text": "Blue Line Replacement Shuttle", "language": "en"}
                 }
               }
             ]
@@ -798,7 +798,7 @@
       		},
       		"date": {
       			"type": "string",
-      			"example": "2021-12-24",
+      			"example": "2021-12-24"
       		},
       		"exception_type": {
       		  "allOf": [
@@ -897,7 +897,7 @@
               "type": "integer",
               "example": [4]
             }
-          }, 
+          },
           "ends_on": {
             "description": "End date and time for repeating event, inclusive",
             "type": "object",
@@ -913,7 +913,7 @@
                 "example": 43600
               }
             }
-          }, 
+          },
           "excluded_dates": {
             "description": "Date exclusions for recurring events",
             "type": "array",
@@ -1003,7 +1003,7 @@
                 "type": "string",
                 "format": "date",
                 "example": "2021-09-23"
-              }, 
+              },
               "time": {
                 "type": "integer",
                 "description": "integer seconds since midnight, local time",
@@ -1018,7 +1018,7 @@
                 "type": "string",
                 "format": "date",
                 "example": "2021-09-23"
-              }, 
+              },
               "time": {
                 "type": "integer",
                 "description": "integer seconds since midnight, local time",
